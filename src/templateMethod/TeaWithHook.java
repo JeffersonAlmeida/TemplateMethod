@@ -1,6 +1,6 @@
 package templateMethod;
 
-public class Tea extends CaffeineBeverage {
+public class TeaWithHook extends CaffeineBeverage{
 
 	@Override
 	void brew() {
@@ -11,5 +11,10 @@ public class Tea extends CaffeineBeverage {
 	void addCondiments() {
 		System.out.println("Adicionando Limao");		
 	}	
+	
+	// gancho
+	public boolean clienteQuerCondimentos() {
+		return true;
+	}
 
 }

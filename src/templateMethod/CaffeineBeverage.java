@@ -1,18 +1,27 @@
 package templateMethod;
 
 public abstract class CaffeineBeverage {
-	// Observe que o metodo é final, ou seja, não pode ser sobrescrito pelas sub-classes
-	final void prepareRecipe(){
+	 
+	 // Observe que o metodo é final, ou seja, não pode ser sobrescrito pelas sub-classes
+	 final void prepareRecipe(){
 		boilWater();
 		brew();
 		pourInCup();
-		addCondiments();
+		if(clienteQuerCondimentos()){
+			addCondiments();	
+		}
+		
+	}
+	
+	// gancho
+	public boolean clienteQuerCondimentos() {
+		return true;
 	}
 
-	public void pourInCup() {
+	final void pourInCup() {
 		System.out.println("Colocando dentro da chicara");
 	}
-	public void boilWater() {
+	final void boilWater() {
 		System.out.println("Fervendo Agua");
 	}
 	abstract void brew();
