@@ -9,8 +9,7 @@ public abstract class CaffeineBeverage {
 		pourInCup();
 		if(clienteQuerCondimentos()){
 			addCondiments();	
-		}
-		
+		}		
 	}
 	
 	// gancho
