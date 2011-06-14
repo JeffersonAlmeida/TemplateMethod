@@ -4,10 +4,10 @@ public class TemplateMethodTest {
 
 	public static void main(String[] args) {
 		CaffeineBeverage tea = new Tea();
-		tea.prepareRecipe();
+		tea.prepareRecipe("Tea");
 		System.out.println("\n***********************\n");
 		CaffeineBeverage coffee = new Coffee();
-		coffee.prepareRecipe();
+		coffee.prepareRecipe("Coffee");
 	}
 
 }

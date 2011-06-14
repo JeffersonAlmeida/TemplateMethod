@@ -6,11 +6,17 @@ public class TemplateMethodHooksTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
 		TeaWithHook teaWithHook = new TeaWithHook();
-		teaWithHook.prepareRecipe();
-		System.out.println("\n***********************\n");
+		teaWithHook.prepareRecipe("Tea");
+		
 		CoffeeWithHook coffeeWithHook = new CoffeeWithHook();
-		coffeeWithHook.prepareRecipe();
+		coffeeWithHook.prepareRecipe("Coffee");
+		
+		
+		HotFruitWithHook hotFruitWithHook = new HotFruitWithHook();
+		hotFruitWithHook.prepareRecipe("HotFruit");
+	
 	}
 
 }
